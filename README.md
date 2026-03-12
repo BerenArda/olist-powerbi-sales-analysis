@@ -9,7 +9,9 @@ This project focuses on analyzing the **Olist Brazilian E-commerce Public Datase
 The main objective of this study is to transform raw e-commerce data into meaningful insights by applying **data cleaning, data modeling, DAX calculations, and data visualization techniques using Microsoft Power BI**.
 
 The project demonstrates the complete data analysis workflow including **data preparation, transformation, modeling, metric creation, and dashboard design** in order to extract business insights from the dataset.
-
+---
+🇹🇷 **[Türkçe Proje Raporu için buraya tıklayın](#turkish-project-report-türkçe-proje-raporu)**
+---
 ---
 
 ## Dataset
@@ -139,6 +141,91 @@ Releases → Power BI Dashboard
 
 ### Customer & Delivery Insights
 <img width="1406" height="791" alt="Customer Delivery_Insights" src="https://github.com/user-attachments/assets/efcc7dfe-e845-4ea0-9304-7c13af8854c4" />
+
+---
+
+# Turkish Project Report (Türkçe Proje Raporu)
+
+## Proje Amacı
+
+Bu projede Kaggle platformundan temin edilen **Olist Brazilian E-commerce Public Dataset** veri seti kullanılarak e-ticaret verilerinin analiz edilmesi ve anlamlı görselleştirmeler aracılığıyla yorumlanabilir hale getirilmesi amaçlanmıştır. Çalışma kapsamında veri hazırlama, veri modelleme ve veri görselleştirme süreçleri **Microsoft Power BI** ortamında gerçekleştirilmiştir.
+
+Projenin temel amacı, ham halde bulunan e-ticaret verilerini analiz edilebilir hale getirerek satış performansı, müşteri davranışları ve operasyonel süreçler hakkında anlamlı iş içgörüleri (business insights) elde etmektir.
+
+---
+
+## Veri Seti
+
+Bu projede kullanılan veri seti Kaggle platformunda yayınlanan **Olist Brazilian E-commerce Public Dataset** veri setidir. Veri seti; siparişler, müşteriler, ürünler, satıcılar, ödeme yöntemleri ve müşteri değerlendirmeleri gibi e-ticaret süreçleriyle ilgili çeşitli tablolar içermektedir.
+
+---
+
+## Veri Temizleme ve Hazırlama Süreci
+
+Veri analizi sürecinin ilk aşamasında veri seti **Power BI ortamına yüklenmiş** ve analiz sürecinde kullanılacak tablolar belirlenmiştir. Veri modelinin daha sade ve yönetilebilir olması amacıyla analizde kullanılmayacak tablolar ve sütunlar veri setinden kaldırılmıştır.
+
+Ardından veri kalitesini artırmak amacıyla kapsamlı bir veri temizleme süreci uygulanmıştır. Bu kapsamda veri setinde bulunan tekrar eden kayıtlar (**duplicate values**) tespit edilerek kaldırılmıştır. Ayrıca veri setindeki eksik değerler (**null values**) kontrol edilerek analiz sürecini olumsuz etkilemeyecek şekilde düzenlenmiştir.
+
+Veri alanlarının doğru şekilde işlenebilmesi için sütunların **veri tipleri (data types)** incelenmiş ve gerekli durumlarda uygun veri türlerine dönüştürülmüştür. Metin tabanlı alanlarda veri tutarlılığını sağlamak amacıyla **Trim** ve **Clean** fonksiyonları kullanılarak gereksiz boşluklar ve hatalı karakterler temizlenmiştir.
+
+Bununla birlikte veri setinde bulunan bazı kategorik değişkenlerin Portekizce olması nedeniyle dashboard üzerinde daha anlaşılır bir analiz sunabilmek amacıyla analizde kullanılan bazı kategori ve alan isimleri İngilizceye çevrilmiştir.
+
+---
+
+## Veri Modelleme
+
+Veri temizleme ve hazırlama işlemlerinin tamamlanmasının ardından **veri modelleme aşamasına** geçilmiştir. Bu aşamada tablolar arasındaki ilişkiler incelenmiş ve birbiriyle ilişkili olan tablolar arasında uygun bağlantılar kurulmuştur.
+
+İlişkiler oluşturulurken özellikle **one-to-many (bire-çok)** ve **many-to-one (çoktan-bire)** ilişki türleri dikkate alınmış ve filtreleme yönleri veri modelinin doğru çalışmasını sağlayacak şekilde ayarlanmıştır. Doğru bir veri modeli oluşturmak analiz sonuçlarının doğruluğu açısından kritik öneme sahiptir.
+
+---
+
+## DAX Ölçüleri (Measures)
+
+Veri modelinin oluşturulmasının ardından analizde kullanılacak temel metrikleri hesaplayabilmek amacıyla ayrı bir **Measures tablosu** oluşturulmuştur. Bu tablo içerisinde çeşitli **DAX (Data Analysis Expressions)** formülleri kullanılarak aşağıdaki ölçütler hesaplanmıştır:
+
+- Total Revenue  
+- Total Orders  
+- Total Products Sold  
+- Total Customers  
+- Revenue per Customer  
+- Average Order Value  
+- Average Review Score  
+- Average Delivery Days  
+
+Bu ölçüler sayesinde dashboard üzerinde dinamik ve anlamlı iş metrikleri hesaplanabilmiştir.
+
+---
+
+## Dashboard ve Görselleştirme
+
+Hazırlanan veri modeli ve DAX ölçüleri kullanılarak **Power BI ortamında birden fazla dashboard sayfası** oluşturulmuştur. Bu dashboardlar aracılığıyla e-ticaret verileri farklı açılardan analiz edilmiştir.
+
+Dashboard tasarımında aşağıdaki konulara odaklanılmıştır:
+
+- Genel satış performansı
+- Kategori bazlı gelir dağılımı
+- En yüksek gelir üreten ürün ve kategoriler
+- Ödeme yöntemlerinin kullanım dağılımı
+- Müşteri memnuniyeti (review score)
+- Sipariş teslimat süreleri ve lojistik performansı
+
+Analiz sonuçlarının daha anlaşılır hale gelmesi amacıyla **bar chart, line chart, treemap, KPI kartları ve slicer** gibi çeşitli görselleştirme teknikleri kullanılmıştır.
+
+---
+## Stratejik Öneriler:
+
+- Satışların düşük olduğu eyaletlerde pazarlama faaliyetleri artırılabilir.
+
+- Kredi kartı dışındaki ödeme yöntemleri için teşvik edici kampanyalar (indirim vb.) düzenlenerek ödeme çeşitliliği artırılabilir.
+
+- Teslimat süresi 20 günü aşan bölgeler için lojistik süreçleri optimize edilerek müşteri memnuniyeti daha da yukarı çekilebilir.
+
+## Sonuç ve İçgörüler
+
+Gerçekleştirilen analiz sonucunda satış performansı, müşteri davranışları ve operasyonel süreçler hakkında çeşitli içgörüler elde edilmiştir. Özellikle en yüksek gelir sağlayan ürün kategorileri, müşteri memnuniyet seviyeleri, ödeme yöntemlerinin kullanım oranları ve teslimat süreleri gibi önemli metrikler analiz edilmiştir.
+
+Elde edilen bu bulgular, e-ticaret operasyonlarının daha iyi anlaşılmasına ve gelecekte alınabilecek stratejik kararlar için veri temelli bir bakış açısı sunmaktadır.
 
 
 
